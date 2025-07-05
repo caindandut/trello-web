@@ -1,30 +1,47 @@
 import Button from '@mui/material/Button'
 import HomeIcon from '@mui/icons-material/Home'
-import { pink } from '@mui/material/colors'
-import Typography  from '@mui/material/Typography'
+import Typography from '@mui/material/Typography'
+import {
+  Experimental_CssVarsProvider as CssVarsProvider,
+  experimental_extendTheme as extendTheme,
+  useColorScheme
+} from '@mui/material/styles'
+
+function ModeToggle() {
+  const { mode, setMode } = useColorScheme();
+  return (
+    <Button
+      onClick={() => {
+        setMode(mode === 'light' ? 'dark' : 'light');
+      }}
+    >
+      {mode === 'light' ? 'Turn dark' : 'Turn light'}
+    </Button>
+  );
+}
 
 function App() {
   return (
     <>
-    <Typography variant="h1" component="h2">
-      Trello Web App
-    </Typography>
-    <Typography variant="body1">
-      This is a simple Trello web app using Material UI.
-    </Typography>
-    <Typography variant="body2" color="textSecondary">
-      This is a secondary text.
-    </Typography>
-      <div>Hello, Trello!</div>
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-      <HomeIcon color="primary" />
-      <HomeIcon color="secondary" />
-      <HomeIcon color="success" />
-      <HomeIcon color="action" />
-      <HomeIcon color="disabled" />
-      <HomeIcon sx={{ color: pink[500] }} />
+      <ModeToggle />
+      <Typography variant="h1" component="h2" gutterBottom>
+        Hello, world!
+      </Typography>
+      <Button variant="contained" startIcon={<HomeIcon />}>
+        Home
+      </Button>
+      <Button variant="outlined" startIcon={<HomeIcon />}>
+        Home
+      </Button>
+      <Button variant="text" startIcon={<HomeIcon />}>
+        Home
+      </Button>
+      <Button variant="text" startIcon={<HomeIcon />} color="secondary">
+        Home
+      </Button>
+      <Button variant="contained" startIcon={<HomeIcon />} color="secondary">
+        Home
+      </Button>
     </>
   )
 }
