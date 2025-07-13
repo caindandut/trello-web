@@ -33,9 +33,9 @@ function Profiles() {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: 32, height: 32 }}
+            sx={{ width: 34, height: 34 }}
             alt='user-avatar'
-            src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-ea08-61f5-879a-19e5bbe14757/raw?se=2025-07-12T10%3A54%3A03Z&sp=r&sv=2024-08-04&sr=b&scid=7edf4f9c-f9ba-5aca-9fcd-0ff048bc4bdf&skoid=02b7f7b5-29f8-416a-aeb6-99464748559d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-12T08%3A40%3A13Z&ske=2025-07-13T08%3A40%3A13Z&sks=b&skv=2024-08-04&sig=vCDOBfvu6Rwfmi7fiuxHnt2SG3T2A9debTpuNmilv4c%3D"
+            src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-ea08-61f5-879a-19e5bbe14757/raw?se=2025-07-13T14%3A13%3A31Z&sp=r&sv=2024-08-04&sr=b&scid=3c263c9a-3601-5e35-b513-17992ec84c44&skoid=b0fd38cc-3d33-418f-920e-4798de4acdd1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-13T10%3A00%3A48Z&ske=2025-07-14T10%3A00%3A48Z&sks=b&skv=2024-08-04&sig=Vlt9Z5tEqRClx/wBU1h7ji1YbKtt9d4P6jxcLuRZzcY%3D"
           />
         </IconButton>
       </Tooltip>
