@@ -11,13 +11,13 @@ import { Tooltip } from '@mui/material'
 import Button from '@mui/material/Button'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 const MENU_STYLE = {
-  color: 'primary.main',
-  bgcolor: 'white',
+  color: 'white',
+  bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
-  '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+  '.MuiSvgIcon-root': {
+    color: 'white'
   },
   '&:hover': {
     backgroundColor: 'primary.50'
@@ -34,39 +34,57 @@ function BoardBar() {
       paddingX: 2,
       gap: 2,
       overflow: 'auto',
-      borderTop: '1px solid #00bfa5'
+      borderBottom: '1px solid white',
+      bgcolor:(theme) => theme.palette.mode === 'dark' ? '#34495e' : '#1976d2'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Chip
           sx={MENU_STYLE}
           icon={<DashboardIcon />}
-          label="Trello" />
+          label="Trello"
+          clickable />
         <Chip
           sx={MENU_STYLE}
           icon={<VpnLockIcon />}
-          label="Public/Private Workspace" />
+          label="Public/Private Workspace"
+          clickable />
         <Chip
           sx={MENU_STYLE}
           icon={<AddToDriveIcon />}
-          label="Add To Google Drive" />
+          label="Add To Google Drive"
+          clickable />
         <Chip
           sx={MENU_STYLE}
           icon={<BoltIcon />}
-          label="Automation" />
+          label="Automation"
+          clickable />
         <Chip
           sx={MENU_STYLE}
           icon={<FilterListIcon />}
-          label="Filters" />
+          label="Filters"
+          clickable/>
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon/>}>Invite</Button>
+        <Button
+          variant="outlined"
+          startIcon={<PersonAddIcon/>}
+          sx={{
+            color:'white',
+            borderColor: 'white',
+            '&:hover' : { borderColor: 'white' }
+          }}
+        >
+          Invite
+        </Button>
         <AvatarGroup
           max={2}
           sx={{
+            gap: '10px',
             '& .MuiAvatar-root' : {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}
         >
